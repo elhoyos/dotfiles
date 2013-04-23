@@ -7,4 +7,10 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+# git
+GIT_PS1_SHOWDIRTYSTATE=true
+
+# bash prompts
+PS1='\W$(__git_ps1 "(%s)") $ '
+
 eval "$(rbenv init -)"
